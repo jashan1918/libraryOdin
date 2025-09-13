@@ -8,6 +8,23 @@
     <title>Library</title>
 </head>
 <body>
-    
+     <div id="library-container"></div>
+
+     <form id="book-form">
+        <input type="text" id="book-title" name="book-title" placeholder="title" required />
+        <input type="text" id="book-author" name="book-author" placeholder="author" required/>
+        <input type="number" id="book-pages" name="book-pages" required/>
+
+        <label>
+        <input type="checkbox" name="readStatus" id="readStatus" required/>
+        Read
+        </label>
+
+        <button type="submit">Submit</button>
+     </form>
+
+     <button onclick="addBookToLibrary()">Add book</button>
 </body>
+
+<script src="main.js"></script>
 </html>

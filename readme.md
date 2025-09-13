@@ -1,0 +1,1 @@
+1. show the books as cards (with a border and the name under the cover)
