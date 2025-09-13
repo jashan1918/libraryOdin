@@ -59,6 +59,24 @@ const container = document.getElementById("library-container");
     card.appendChild(pages);
     card.appendChild(read);
 
+    //create a remove book button
+     const remove = document.createElement("button");
+     remove.textContent = "remove";
+     
+     card.appendChild(remove)
+
+     remove.addEventListener('click', () => {
+
+
+  // Remove card from DOM
+  card.remove();
+
+
+});
+
+
+
+        
     // Append card to container
     container.appendChild(card);
         
@@ -76,7 +94,7 @@ form.addEventListener("submit", function(event) {
     const title = document.getElementById("book-title").value.trim();
     const author = document.getElementById("book-author").value.trim();
     const pages = document.getElementById("book-pages").value.trim();
-      const readStatus = document.getElementById('book-read').checked;
+      const readStatus = document.getElementById('readStatus').checked;
 
       const newBook = new Book(title, author, pages, readStatus);
       addBookToLibrary(newBook);
